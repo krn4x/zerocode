@@ -1,6 +1,6 @@
 {
   "name": "zerocode",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "description": "Stop writing bad AI code - One command to fix your AI assistant",
   "main": "dist/index.js",
   "bin": {
