@@ -1,0 +1,62 @@
+{
+  "name": "zerocode",
+  "version": "2.0.0",
+  "description": "Stop writing bad AI code - One command to fix your AI assistant",
+  "main": "dist/index.js",
+  "bin": {
+    "zerocode": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/cli.ts",
+    "clean": "rimraf dist",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
+    "prepack": "npm run build",
+    "postinstall": "node scripts/postinstall.js",
+    "release": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish"
+  },
+  "keywords": [
+    "ai",
+    "ai-assistant",
+    "copilot",
+    "cursor",
+    "claude",
+    "prompt",
+    "code-quality",
+    "developer-tools",
+    "productivity",
+    "simple-code"
+  ],
+  "author": "AI Prompt Generator Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krn4x/zerocode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/krn4x/zerocode/issues"
+  },
+  "homepage": "https://github.com/krn4x/zerocode#readme",
+  "files": [
+    "dist/**/*",
+    "templates/**/*",
+    "scripts/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
